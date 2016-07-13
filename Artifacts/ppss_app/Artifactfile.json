@@ -55,6 +55,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File ppss_install.ps1', ' -GitBranch ', parameters('Branch'), ' -ProsUser ', parameters('ProsUser'), ' -ProsPassword ', parameters('ProsPassword'), ' -DataBaseName ', parameters('DataBaseName'), ' -DataBaseServerIP ', parameters('DataBaseServerIP'), ' -DataBaseUser ', parameters('DataBaseUser'), ' -DataBasePassword ', parameters('DataBasePassword'),' -JavaDownloadUri ', parameters('JavaDownloadUri'))]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File StartPPSS.ps1', ' -GitBranch ', parameters('Branch'), ' -ProsUser ', parameters('ProsUser'), ' -ProsPassword ', parameters('ProsPassword'), ' -DataBaseName ', parameters('DataBaseName'), ' -DataBaseServerIP ', parameters('DataBaseServerIP'), ' -DataBaseUser ', parameters('DataBaseUser'), ' -DataBasePassword ', parameters('DataBasePassword'),' -JavaDownloadUri ', parameters('JavaDownloadUri'))]"
     }
 }
