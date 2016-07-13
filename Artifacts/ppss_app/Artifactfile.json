@@ -48,7 +48,7 @@
             "description": "SQL Server autentication DB Password."
         },
         "JavaDownloadUri": {
-            "type": "int",
+            "type": "string",
             "displayName": "Java Download Uri",
             "description": "Required Java version to install PPSS, The one set by default is the latest supported for PPSS.",
             "defaultValue": "http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77-windows-x64.exe"
