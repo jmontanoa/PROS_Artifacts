@@ -33,7 +33,7 @@
             "description": "Database name to use in PPSS installation"
         },
         "DataBaseServerIP": {
-            "type": "int",
+            "type": "string",
             "displayName": "Database server IP adress",
             "description": "DB server IP address to reach database."
         },
