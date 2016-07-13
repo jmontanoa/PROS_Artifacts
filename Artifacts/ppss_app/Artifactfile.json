@@ -8,7 +8,7 @@
         "PROS",
         "PPSS"
     ],
-    "iconUri": "//prosweb-prod4.cloudapp.net/wp-content/uploads/2015/12/logo-pros-logo-tagline1.svg",
+    "iconUri": "http://prosweb-prod4.cloudapp.net/wp-content/uploads/2015/12/logo-pros-logo-tagline1.svg",
     "targetOsType": "Windows",
     "parameters": {
         "Branch": {
