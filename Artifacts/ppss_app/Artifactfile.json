@@ -1,0 +1,60 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+    "title": "PROS PPSS application",
+    "publisher": "PROS",
+    "description": "Install a PPSS application from scratch in windows environment",
+    "tags": [
+        "Windows",
+        "PROS",
+        "PPSS"
+    ],
+    "iconUri": "//prosweb-prod4.cloudapp.net/wp-content/uploads/2015/12/logo-pros-logo-tagline1.svg",
+    "targetOsType": "Windows",
+    "parameters": {
+        "Branch": {
+            "type": "string",
+            "displayName": "PPSS Branch / Tag",
+            "description": "The branch or tag that will be checked out for PPSS installation. Specify 'master' for latest PPSS installation, Specify branch(e.g release/3.37.0) for specific PPSS version",
+            "defaultValue": "master"
+        },
+        "ProsUser": {
+            "type": "string",
+            "displayName": "Pros user account",
+            "description": "Pros user account to have access to some required resources."
+        },
+        "ProsPassword": {
+            "type": "securestring",
+            "displayName": "Pros User Password",
+            "description": "Pros user account password."
+        },
+        "DataBaseName": {
+            "type": "string",
+            "displayName": "DB Name",
+            "description": "Database name to use in PPSS installation"
+        },
+        "DataBaseServerIP": {
+            "type": "int",
+            "displayName": "Database server IP adress",
+            "description": "DB server IP address to reach database."
+        },
+        "DataBaseUser": {
+            "type": "string",
+            "displayName": "DB User",
+            "description": "Data base user name for SQL server autentication."
+        },
+        "DataBasePassword": {
+            "type": "securestring",
+            "displayName": "DB Password",
+            "description": "SQL Server autentication DB Password."
+        },
+        "JavaDownloadUri": {
+            "type": "int",
+            "displayName": "Java Download Uri",
+            "description": "Required Java version to install PPSS, The one set by default is the latest supported for PPSS.",
+            "defaultValue": "http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77-windows-x64.exe"
+        }
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File ppss_install.ps1', ' -GitBranch ', parameters('Branch'), ' -ProsUser ', parameters('ProsUser'), ' -ProsPassword ', parameters('ProsPassword'), ' -DataBaseName ', parameters('DataBaseName'), ' -DataBaseServerIP ', parameters('DataBaseServerIP'), ' -DataBaseUser ', parameters('DataBaseUser'), ' -DataBasePassword ', parameters('DataBasePassword'),' -JavaDownloadUri ', parameters('JavaDownloadUri'))]"
+    }
+}

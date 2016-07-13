@@ -1,0 +1,6 @@
+rm -rf environmentsetup
+SSH_KEY="$(ssh-keyscan stash.pros.com)"
+if ! grep -q "$SSH_KEY" .ssh/known_hosts ; then
+   ssh-keyscan stash.pros.com >> ~/.ssh/known_hosts
+fi
+git clone ssh://git@stash.pros.com/ppss/environmentsetup.git
